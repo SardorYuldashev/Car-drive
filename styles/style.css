@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.body {
+  position: relative;
+}
+.body__car-imgBox {
+  position: absolute;
+  bottom: 50px;
+  left: 15%;
+  width: 700px;
+}
+.body__car-img {
+  width: 100%;
+}
+.body__car-disc1 {
+  width: 100px;
+  position: absolute;
+  bottom: 18.5%;
+  left: 10.9%;
+  -webkit-animation-name: disc;
+          animation-name: disc;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  z-index: 4;
+  transition: 0.3s;
+}
+.body__car-black1 {
+  width: 99px;
+  height: 99px;
+  background: rgb(141, 151, 145);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 18.5%;
+  left: 10.9%;
+  z-index: 2;
+}
+.body__car-support1 {
+  position: absolute;
+  bottom: 28.1%;
+  left: 13.6%;
+  width: 60px;
+  z-index: 3;
+  transform: rotateZ(200deg);
+}
+.body__car-disc2 {
+  width: 92px;
+  position: absolute;
+  bottom: 17.5%;
+  left: 70.2%;
+  -webkit-animation-name: disc;
+          animation-name: disc;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  z-index: 4;
+  transition: 0.3s;
+}
+.body__car-black2 {
+  width: 91px;
+  height: 91px;
+  background: rgb(141, 151, 145);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 17.5%;
+  left: 70.2%;
+  z-index: 2;
+}
+.body__car-support2 {
+  position: absolute;
+  bottom: 26.5%;
+  left: 72.7%;
+  width: 55px;
+  z-index: 3;
+  transform: rotateZ(200deg);
+}
+.body__car-fara {
+  position: absolute;
+  top: 60px;
+  right: -120px;
+  width: 180px;
+  height: 100px;
+  opacity: 0;
+  transition: 1s;
+}
+.body__controls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.body__controls-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+  width: 200px;
+}
+.body__controls-btn {
+  width: 100%;
+  border: none;
+  padding: 8px 12px;
+  background: red;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 90;
+}
+.body__controls-btn:hover {
+  background: blue;
+}
+.body__info {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  z-index: 5;
+}
+.wrapper__top {
+  height: 75vh;
+  background: rgb(236, 245, 252);
+  position: relative;
+  overflow: hidden;
+  transition: 1s;
+}
+.wrapper__top-stolbs {
+  width: 1000px;
+  height: 400px;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  -webkit-animation-name: lineStolb;
+          animation-name: lineStolb;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  display: flex;
+  justify-content: space-around;
+  transition: 0.3s;
+}
+.wrapper__top-stolbBox {
+  width: 300px;
+  max-height: 100%;
+  position: relative;
+}
+.wrapper__top-stolb {
+  width: 100%;
+  max-height: 100%;
+  z-index: 3;
+}
+.wrapper__top-nur {
+  position: absolute;
+  top: -1%;
+  left: 27%;
+  height: 100px;
+  z-index: 2;
+  opacity: 0;
+  transition: 1s;
+}
+.wrapper__top-nebo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 500px;
+  width: 100%;
+  opacity: 0.5;
+}
+.wrapper__top-stars {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 350px;
+  width: 100%;
+  transition: 1s;
+}
+.wrapper__bottom {
+  position: relative;
+  height: 25vh;
+  background: rgb(39, 38, 38);
+  overflow: hidden;
+}
+.wrapper__bottom-lines {
+  position: absolute;
+  bottom: 30px;
+  left: 30%;
+  width: 1300px;
+  -webkit-animation-name: lineAnime;
+          animation-name: lineAnime;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.3s;
+}
+.wrapper__bottom-line {
+  width: 200px;
+  height: 15px;
+  background: white;
+  transform: skewX(-45deg);
+}
+
+@-webkit-keyframes lineStolb {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes lineStolb {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+@-webkit-keyframes lineAnime {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+@keyframes lineAnime {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+@-webkit-keyframes disc {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes disc {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=style.css.map */

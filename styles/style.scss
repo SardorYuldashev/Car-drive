@@ -1,0 +1,287 @@
+@import "global";
+
+.body {
+  position: relative;
+
+  &__car {
+
+    &-imgBox {
+      position: absolute;
+      bottom: 50px;
+      left: 15%;
+      width: 700px;
+    }
+
+    &-img {
+      width: 100%;
+    }
+
+    &-disc1 {
+      width: 100px;
+      position: absolute;
+      bottom: 18.5%;
+      left: 10.9%;
+      animation-name: disc;
+      animation-play-state: paused;
+      animation-duration: 1s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      z-index: 4;
+      transition: .3s;
+
+    }
+
+    &-black1 {
+      width: 99px;
+      height: 99px;
+      background: rgb(141, 151, 145);
+      border-radius: 50%;
+      position: absolute;
+      bottom: 18.5%;
+      left: 10.9%;
+      z-index: 2;
+    }
+
+    &-support1 {
+      position: absolute;
+      bottom: 28.1%;
+      left: 13.6%;
+      width: 60px;
+      z-index: 3;
+      transform: rotateZ(200deg);
+    }
+
+
+
+
+
+    &-disc2 {
+      width: 92px;
+      position: absolute;
+      bottom: 17.5%;
+      left: 70.2%;
+      animation-name: disc;
+      animation-play-state: paused;
+      animation-duration: 1s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      z-index: 4;
+      transition: .3s;
+    }
+
+    &-black2 {
+      width: 91px;
+      height: 91px;
+      background: rgb(141, 151, 145);
+      border-radius: 50%;
+      position: absolute;
+      bottom: 17.5%;
+      left: 70.2%;
+      z-index: 2;
+    }
+
+    &-support2 {
+      position: absolute;
+      bottom: 26.5%;
+      left: 72.7%;
+      width: 55px;
+      z-index: 3;
+      transform: rotateZ(200deg);
+    }
+
+    &-fara {
+      position: absolute;
+      top: 60px;
+      right: -120px;
+      width: 180px;
+      height: 100px;
+      opacity: 0;
+      transition: 1s;
+    }
+  }
+
+  &__controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 10px;
+      width: 200px;
+    }
+
+    &-btn {
+      width: 100%;
+      border: none;
+      padding: 8px 12px;
+      background: red;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: .3s;
+      z-index: 90;
+
+      &:hover {
+        background: blue;
+      }
+    }
+  }
+
+  &__info {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    transition: .3s;
+  }
+}
+
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  z-index: 5;
+
+  &__top {
+    height: 75vh;
+    background: rgb(236, 245, 252);
+    position: relative;
+    overflow: hidden;
+    transition: 1s;
+
+    &-stolbs {
+      width: 1000px;
+      height: 400px;
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      animation-name: lineStolb;
+      animation-play-state: paused;
+      animation-duration: 3s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      display: flex;
+      justify-content: space-around;
+      transition: .3s;
+    }
+
+    &-stolbBox {
+      width: 300px;
+      max-height: 100%;
+      position: relative;
+    }
+
+    &-stolb {
+      width: 100%;
+      max-height: 100%;
+      z-index: 3;
+    }
+
+    &-nur {
+      position: absolute;
+      top: -1%;
+      left: 27%;
+      height: 100px;
+      z-index: 2;
+      opacity: 0;
+      transition: 1s;
+    }
+
+    &-nebo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 500px;
+      width: 100%;
+      opacity: 0.5;
+    }
+
+    &-stars {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 350px;
+      width: 100%;
+      transition: 1s;
+    }
+  }
+
+
+
+
+
+
+  &__bottom {
+    position: relative;
+    height: 25vh;
+    background: rgb(39, 38, 38);
+    overflow: hidden;
+
+    &-lines {
+      position: absolute;
+      bottom: 30px;
+      left: 30%;
+      width: 1300px;
+      animation-name: lineAnime;
+      animation-play-state: paused;
+      animation-duration: 3s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      display: flex;
+      justify-content: space-between;
+      transition: .3s;
+    }
+
+    &-line {
+
+      width: 200px;
+      height: 15px;
+      background: white;
+      transform: skewX(-45deg);
+
+    }
+  }
+}
+
+
+
+@keyframes lineStolb {
+  0% {
+    left: 100%;
+  }
+
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes lineAnime {
+  0% {
+    left: 100%;
+  }
+
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes disc {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
